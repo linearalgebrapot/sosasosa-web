@@ -15,3 +15,12 @@ $ npm install
 ~~~
 $ npm start
 ~~~
+
+* Adjust Modification on aws
+
+~~~
+$ ps -e | grep node
+$ kill pid_for_node
+$ npm install
+$ npm start &
+~~~
