@@ -23,7 +23,7 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(vhost('pingping.sosasosa.dev', pingping));
 
-
+/*
 // create main(non-sub-domained) router object
 var router = express.Router();
 
@@ -33,9 +33,12 @@ router.route('/').get((req, res) => {
     res.write(`<a href='https://pingping.sosasosa.dev/'>Pingping App</a>`);
     res.end();
 });
+*/
+
+app.use(express.static('static'));
 
 // register router objs. to app obj.
-app.use('/', router);
+//app.use('/', router);
 
 
 http.createServer(app).listen(app.get('port'), function() {
